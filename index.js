@@ -69,52 +69,7 @@ let realTimeLatLng = {
 }
 let dialogRealSumTimeConfig = null
 
-$(document).ready(function () {
-  // 获取用户名
-  $('.loginname').html(window.localStorage.getItem('username'))
-  // 请求时区数据
-  timeZoneList.map(item => {
-    item.title += ` GMT${item.offset >= 0 ? '+' : ''}${item.offset}`
-  })
-  init()
-  initRealSunTime()
 
-  //初始化地图
-  if (null == googleMapInstance) {
-    var js_file = document.createElement('script')
-    js_file.type = 'text/javascript'
-    js_file.src =
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k5kJeKpF6Gs4t9-a-wJg53EyQntj2Gk&callback=initGoogleMap&libraries=places&v=weekly&&region=CN'
-    document.getElementsByTagName('head')[0].appendChild(js_file)
-  }
-})
-
-function init() {
-  layui.use(['laydate', 'form', 'layer', 'table'], function () {
-    laydate = layui.laydate
-    form = layui.form
-    layer = layui.layer
-    table = layui.table
-
-    $('#ganZhiRateTips').on('click', function () {
-      var that = this
-      layer.tips('假如天干与地支的力量比例分别为20%和80%，那么天干总共分160分，地支总共为640分。', that, { time: 20000 })
-    })
-    $('#siZhuRateTips').on('click', function () {
-      var that = this
-      layer.tips(
-        '四柱比例。由于月份对八字五行强弱的影响最大，时辰次之，年份与日期最弱，年份与月份的影响力基本相当。所以假设当月支为300分，时支为140分，年支及日支则各为100分',
-        that,
-        { time: 20000 }
-      )
-    })
-    $('#dayunTips').on('click', function () {
-      var that = this
-      layer.tips('大运干支占得的分数', that, {
-        time: 20000
-      })
-    })
-    $('#qiRateTips').on('click', function () {
       var that = this
       layer.tips('藏气比例。辰戌丑未之月，除了当月主气之外，还有上一季节的中气余气。假设主气占60%，中气占40%，余气占0%', that, {
         time: 20000
@@ -411,91 +366,7 @@ function initRealSunTime() {
   }, 1000)
 }
 
-function onDateTimeStrInput(css_selector = '#birthTimeStr2') {
-  let v = $(css_selector).val()
-  // console.log(css_selector)
-  if (!/^\s*\d{4}\s*\d{2}\s*\d{2}\s*\d{2}\s*\d{2}\s*\d{2}\s*[+-]?$/.test(v)) {
-    $(css_selector).addClass('error-input')
-    return
-  }
-  $(css_selector).removeClass('error-input')
-  v = trim(v)
-  var year = parseInt(v.substr(0, 4))
-  v = v.substr(4)
-  var month = parseInt(v.substr(0, 2), 10)
-  v = trim(v.substr(2))
-  var day = parseInt(v.substr(0, 2), 10)
-  v = trim(v.substr(2))
-  var hour = parseInt(v.substr(0, 2), 10)
-  v = trim(v.substr(2))
-  var minute = parseInt(v.substr(0, 2), 10)
-  v = trim(v.substr(2))
-  var second = parseInt(v.substr(0, 2), 10)
-  v = trim(v.substr(2))
-  var gender = '男'
-  if ('+' == v) {
-    gender = '男'
-  } else if ('-' == v) {
-    gender = '女'
-  }
-  if (month < 10) month = '0' + month
-  if (day < 10) day = '0' + day
-  if (hour < 10) hour = '0' + hour
-  if (minute < 10) minute = '0' + minute
-  if (second < 10) second = '0' + second
-  // console.log(year, month, day, hour, minute, second, gender)
-  let cTimeData = {
-    year: year,
-    month: month,
-    date: day,
-    hours: hour,
-    minutes: minute,
-    seconds: second
-  }
 
-  if (css_selector == '#birthTimeStr2') {
-    chooseTimeDate = cTimeData
-    renderPreviewNongGongli()
-  }
-
-  if (css_selector.indexOf('#liuTimeStr') != -1) {
-    let chooseTimeValue = `${cTimeData.year}-${cTimeData.month}-${cTimeData.date} ${cTimeData.hours}:${cTimeData.minutes}:${cTimeData.seconds}`
-    panData.liuTime = new Date(chooseTimeValue.replace(/-/g, '/'))
-
-    $('.liu-preview').html(chooseTimeValue)
-  }
-}
-
-function onBTimeStrInput() {
-  let manualForm = form.val('form-info-manual')
-  chooseTimeDate = {
-    year: manualForm.yearBTime,
-    month: manualForm.monthBTime,
-    date: manualForm.dayBTime,
-    hours: manualForm.hourBTime,
-    minutes: manualForm.minBTime,
-    seconds: manualForm.secondBTime
-  }
-
-  renderPreviewNongGongli()
-}
-var trim = function (s) {
-  return s.replace(/(^\s*)|(\s*$)/g, '')
-}
-
-function renderPreviewNongGongli() {
-  if (null == chooseTimeDate) {
-    return null
-  }
-  let chooseTimeValue = `${chooseTimeDate.year}-${chooseTimeDate.month}-${chooseTimeDate.date} ${chooseTimeDate.hours}:${chooseTimeDate.minutes}:${chooseTimeDate.seconds}`
-
-  let nongliPreview = '' //农历预览时间
-  let gongliPreview = '' //公历预览时间
-  let zhenTaiyangPreview = '' //真太阳预览时间
-
-  try {
-    if (panData.isGong == '1') {
-      gongliPreview = chooseTimeValue
       //公历
       nongliPreview = Solar.fromDate(new Date(chooseTimeValue.replace(/-/g, '/')))
         .getLunar()
