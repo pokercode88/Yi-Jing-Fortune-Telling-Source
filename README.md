@@ -5,6 +5,7 @@
 **一站式中國傳統術數排盤系統 | 網頁版即時展示**
 
 [![Demo]([https://img.shields.io/badge/在线演示-周易排盘-green.svg](https://x.com/li_alibaba/status/2015364777628008532?s=46)
+[![在线演示](https://img.shields.io/badge/在线演示-周易排盘-green.svg)](https://x.com/li_alibaba/status/2015364777628008532?s=46/)
 [![Contact](https://img.shields.io/badge/联系-Telegram-blue.svg)](https://t.me/alibabama401)
 
 **简体中文 · 繁體中文**
