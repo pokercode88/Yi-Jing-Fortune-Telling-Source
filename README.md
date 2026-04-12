@@ -1,10 +1,9 @@
 <div align="center">
 
-# 🪷 周易排盤 · 易經占卜 | 紫微斗數 · 奇門遁甲 · 大六壬 · 七政四餘
+# 🪷 周易排盤 · 易經占卜 | 紫微斗數 · 奇門遁甲 · 大六壬 · 七政四餘· 神煞
 
 **一站式中國傳統術數排盤系統 | 網頁版即時展示**
 
-[![Demo]([https://img.shields.io/badge/在线演示-周易排盘-green.svg](https://x.com/li_alibaba/status/2015364777628008532?s=46)
 [![在线演示](https://img.shields.io/badge/在线演示-周易排盘-green.svg)](https://x.com/li_alibaba/status/2015364777628008532?s=46/)
 [![Contact](https://img.shields.io/badge/联系-Telegram-blue.svg)](https://t.me/alibabama401)
 
