@@ -135,6 +135,11 @@ A：可以。網頁版適配移動端。
 **如果這個項目對你有幫助，歡迎點個 Star 支持一下！**  
 ⭐️ **Star** ⭐️
 
+💬 Contact now for full source code & live demo
+📧 Email: ttpoker733@gmail.com
+💬 Telegram: @alibabama401
+
+
 
 Yi-Jing divination system
 I-Ching divination app
@@ -143,6 +148,9 @@ fortune-telling software
 易经占卜系统
 占卜应用源码
 fortune telling system
+hexagram divination
+I-Ching divination app, 
+fortune-telling system, 
 hexagram divination
 
 </div>
