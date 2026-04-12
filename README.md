@@ -10,7 +10,14 @@
 **简体中文 · 繁體中文**
 
 </div>
-
+🔥 Production-ready Yi-Jing (I-Ching) Divination System
+🔥 Used in real divination apps & projects
+🔥 Multi-platform support: Web, iOS, Android
+🔥 Contact for full source code & live demo
+🔥 生产级易经占卜系统
+🔥 已应用于真实占卜应用及项目
+🔥 多平台支持：Web、iOS、Android
+🔥 联系获取完整源码及在线演示
 ---
 
 ## 📖 項目介紹 | 项目介绍
@@ -43,7 +50,23 @@
 | ⚡ **刑沖關係** | 地支刑沖合害自動分析 |
 
 ---
-
+## ✨ Features | 核心功能 | 功能特色
+- ✅ Full I-Ching (Yi-Jing) divination algorithm
+- ✅ Multiple divination methods: Classic, Hexagram, Trigram
+- ✅ Multi-platform support (Web / Mobile)
+- ✅ Customizable output & interpretation
+- ✅ User-friendly interface
+  ## 🧩 System Modules | 系统模块 | 系統模組
+- 🎮 Divination Engine (占卜核心算法)
+- 📱 Web & Mobile Client
+- 🛠 Admin Panel for customization
+- 📊 Analytics & User Records
+- 🔧 Deployment Guide
+  ## ⚙️ Technical Highlights | 技术亮点 | 技術亮點
+- ⚡ Accurate I-Ching calculation engine
+- 🧩 Modular & easy-to-integrate system
+- 📡 Low-latency, real-time results
+- 🔒 Secure user data & history storage
 ## 🖼️ 界面截圖 | 界面截图
 
 > **请将你的排盘系统截图拖拽到下方表格中**（建议：主界面、八字排盘、紫微斗数各一张）
@@ -111,6 +134,16 @@ A：可以。網頁版適配移動端。
 
 **如果這個項目對你有幫助，歡迎點個 Star 支持一下！**  
 ⭐️ **Star** ⭐️
+
+
+Yi-Jing divination system
+I-Ching divination app
+fortune-telling software
+易经占卜源码
+易经占卜系统
+占卜应用源码
+fortune telling system
+hexagram divination
 
 </div>
 
