@@ -60,7 +60,6 @@
 - 🔒 Secure user data & history storage
 ## 🖼️ 界面截圖 | 界面截图
 
-> **请将你的排盘系统截图拖拽到下方表格中**（建议：主界面、八字排盘、紫微斗数各一张）
 
 | 主界面 | 八字排盘 | 紫微斗数 |
 |:---:|:---:|:---:|
@@ -94,12 +93,10 @@ cd Yi-Jing-Fortune-Telling-Source
 # Mac: 双击 index.html 或用浏览器打开
 
 
-### 獲取完整源碼
+## 獲取完整源碼
 
 如需包含**全部術數模組、商業使用授權、技術支持**的完整版本，請聯繫：
 
-| 渠道 | 帳號 |
-|:---|:---|
 | **Telegram** | @alibabama401 |
 | **Email** | ttpoker733@gmail.com |
 
@@ -146,7 +143,5 @@ hexagram divination
 I-Ching divination app, 
 fortune-telling system, 
 hexagram divination
-
-</div>
 
 
