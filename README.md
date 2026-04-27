@@ -1,12 +1,13 @@
 <div align="center">
 
-# 🪷 周易排盤 · 易經占卜 | 紫微斗數 · 奇門遁甲 · 大六壬 · 七政四餘· 神煞
+# 🪷 周易排盘 · 易经占卜 |周易排盤 · 易經占卜 | 紫微斗數 · 奇門遁甲 · 大六壬 · 七政四餘· 神煞|八字/紫微/奇门/六壬 | 网页版
 
-**一站式中國傳統術數排盤系統 | 網頁版即時展示**
-
-[![在线演示](https://img.shields.io/badge/在线演示-周易排盘-green.svg)](https://x.com/li_alibaba/status/2015364777628008532?s=46/)
+**一站式中国传统术数排盘系统 | 含完整JS算法 | 支持简体/繁體 | 克隆即可运行**
 [![Contact](https://img.shields.io/badge/联系-Telegram-blue.svg)](https://t.me/alibabama401)
 
+[![License](https://img.shields.io/badge/License-Commercial-red.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/demo-local-orange.svg)](#-本地运行)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 **简体中文 · 繁體中文**
 
 </div>
@@ -95,10 +96,13 @@
 ## 🚀 快速體驗 | 快速体验
 
 ### 在線演示
+git clone https://github.com/pokercode88/Yi-Jing-Fortune-Telling-Source.git
+cd Yi-Jing-Fortune-Telling-Source
 
-1. 下載或克隆本倉庫
-2. 打開 `index.html` 即可本地運行
-3. 或部署到任意靜態服務器
+# 2. 直接双击 index.html 或 demo/ 中的文件即可运行
+# Windows: 双击 index.html
+# Mac: 双击 index.html 或用浏览器打开
+
 
 ### 獲取完整源碼
 
