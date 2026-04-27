@@ -1,8 +1,7 @@
-<div align="center">
-
 # 🪷 周易排盘 · 易经占卜 |周易排盤 · 易經占卜 | 紫微斗數 · 奇門遁甲 · 大六壬 · 七政四餘· 神煞|八字/紫微/奇门/六壬 | 网页版
 
 **一站式中国传统术数排盘系统 | 含完整JS算法 | 支持简体/繁體 | 克隆即可运行**
+
 [![Contact](https://img.shields.io/badge/联系-Telegram-blue.svg)](https://t.me/alibabama401)
 
 [![License](https://img.shields.io/badge/License-Commercial-red.svg)](LICENSE)
@@ -10,15 +9,6 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 **简体中文 · 繁體中文**
 
-</div>
-🔥 Production-ready Yi-Jing (I-Ching) Divination System
-🔥 Used in real divination apps & projects
-🔥 Multi-platform support: Web, iOS, Android
-🔥 Contact for full source code & live demo
-🔥 生产级易经占卜系统
-🔥 已应用于真实占卜应用及项目
-🔥 多平台支持：Web、iOS、Android
-🔥 联系获取完整源码及在线演示
 ---
 
 ## 📖 項目介紹 | 项目介绍
