@@ -1,0 +1,69 @@
+一、软件需求
+1、操作系统
+   CENTOS7
+2、数据库
+   Mysql5.7
+3、缓存数据库
+   Redis 5.0
+4、前端web
+   Nginx
+
+二、相关配置
+1、Nginx配置
+server {
+    listen 8090; 
+    
+
+    access_log  logs/www.wujibazi.com.log  main;
+   
+    location / {
+        autoindex off;
+        root /data/web/www.wujibazi.com;
+    } 
+    location /api/ {
+           autoindex off;
+           proxy_connect_timeout    6000;
+           proxy_read_timeout       6000;
+           proxy_send_timeout       6000;
+           proxy_set_header Host $host:$server_port;
+           proxy_set_header X-Real-Ip $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          #proxy_pass对应JAVA服务地址和端口 
+          proxy_pass http://127.0.0.1:8089/;
+    }
+
+    location /qm/ {
+           autoindex off;
+           proxy_connect_timeout    6000;
+           proxy_read_timeout       6000;
+           proxy_send_timeout       6000;
+           proxy_set_header Host $host:$server_port;
+           proxy_set_header X-Real-Ip $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           #proxy_pass 代理到第三方地址
+           proxy_pass http://app.bazi.hk/;
+    }
+
+    index index.html index.htm;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+}
+
+2、mysql数据表结构及数据。
+    文件夹中的wujibazi-20231202.tar.gz文件
+
+3、h5和Java代码
+    对应文件夹中打的h5和java，需要添加额外MEV依赖（文件libs.rar），方法如下：
+mvn install:install-file -Dfile=/root/bazi/libs/moira-java.jar -DgroupId=org.athomeprojects -DartifactId=moira-java -Dversion=1.0.0 -Dpackaging=jar
+mvn install:install-file -Dfile=/root/bazi/libs/org.eclipse.core.commands_3.9.700.v20191217-1850.jar -DgroupId=org.eclipse.platform -DartifactId=org.eclipse.core.commands -Dversion=3.9.700 -Dpackaging=jar
+mvn install:install-file -Dfile=/root/bazi/libs/org.eclipse.equinox.common_3.11.0.v20200206-0817.jar -DgroupId=org.eclipse.platform -DartifactId=org.eclipse.equinox.common -Dversion=3.11.0 -Dpackaging=jar
+mvn install:install-file -Dfile=/root/bazi/libs/org.eclipse.jface_3.19.0.v20200218-1607.jar -DgroupId=org.eclipse.platform -DartifactId=org.eclipse.jface -Dversion=3.19.0 -Dpackaging=jar
+mvn install:install-file -Dfile=/root/bazi/libs/swt.jar -DgroupId=org.eclipse.sdk -DartifactId=swt -Dversion=1.0.0 -Dpackaging=jar
+mvn install:install-file -Dfile=/root/bazi/libs/org.eclipse.sdk-1.0.0.jar -DgroupId=org.eclipse.sdk -DartifactId=org.eclipse.sdk -Dversion=1.0.0 -Dpackaging=jar
+
+
+- 20250124 修订说明
+  - 使用 wujibazi_20240124.sql 数据库
+  - 当前版本编译完的jar包，wujibazi-0.0.1-SNAPSHOT_20240124.jar
+  - 其他为旧的文件
